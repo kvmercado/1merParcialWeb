@@ -17,6 +17,7 @@ export class CreditoRegistroComponent implements OnInit {
   }
 
   add() {
+    this.credito.CalcularValor();
     alert('Credito creado!' + JSON.stringify(this.credito));
     this.creditoService.post(this.credito)
     };

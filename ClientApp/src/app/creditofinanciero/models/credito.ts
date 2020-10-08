@@ -5,4 +5,12 @@ export class Credito {
     tasainteres: number;
     tiempoduracioncredito: number;
     valortotal: number;
+
+    CalcularValor( ){
+        var tasa = this.tasainteres / 100;
+       this.valortotal = this.capitalinicial * Math.pow((1 + tasa), this.tiempoduracioncredito);
+    }
+
 }
+
+ 
